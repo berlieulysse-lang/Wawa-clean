@@ -739,214 +739,82 @@ pour chaque client.
 
 
 <!-- =========================
+     <!-- =========================
      CONTACT
 ========================= -->
-
 <section id="contact" class="contact">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-Contactez-nous
-</h2>
-
-<p>
-Besoin d'un service de nettoyage?
-Nous sommes là pour vous aider.
-</p>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<!-- COORDONNÉES -->
-
-<div class="contact-info">
-
-<h3>
-Nos coordonnées
-</h3>
-
-
-<div class="contact-item">
-
-<strong>
-📞 Téléphone
-</strong>
-
-<a href="tel:8192474996">
-819-247-4996
-</a>
-
-<br>
-
-<a href="tel:8199794300">
-819-979-4300
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>
-📧 Courriel
-</strong>
-
-<a href="mailto:wawaclean4@gmail.com">
-wawaclean4@gmail.com
-</a>
-
-</div>
-
-
-<div class="contact-item">
-
-<strong>
-📍 Secteur desservi
-</strong>
-
-Shawinigan et les environs
-
-</div>
-
-</div>
-
-
-<!-- FORMULAIRE -->
-
-<div class="contact-form">
-
-<h3>
-Demander une soumission
-</h3>
-
-
-<form
-action="mailto:wawaclean4@gmail.com"
-method="post"
-enctype="text/plain"
->
-
-
-<div class="form-group">
-
-<label for="nom">
-Nom complet
-</label>
-
-<input
-type="text"
-id="nom"
-name="Nom"
-placeholder="Votre nom"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="telephone">
-Téléphone
-</label>
-
-<input
-type="tel"
-id="telephone"
-name="Téléphone"
-placeholder="Votre numéro"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="email">
-Courriel
-</label>
-
-<input
-type="email"
-id="email"
-name="Courriel"
-placeholder="Votre courriel"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="service">
-Type de service
-</label>
-
-<select
-id="service"
-name="Service"
-required>
-
-<option value="">
-Sélectionnez un service
-</option>
-
-<option value="Nettoyage résidentiel">
-Nettoyage résidentiel
-</option>
-
-<option value="Nettoyage commercial">
-Nettoyage commercial
-</option>
-
-<option value="Nettoyage spécialisé">
-Nettoyage spécialisé
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="message">
-Votre message
-</label>
-
-<textarea
-id="message"
-name="Message"
-placeholder="Décrivez-nous votre besoin..."
-required></textarea>
-
-</div>
-
-
-<button
-type="submit"
-class="submit-btn">
-
-Envoyer ma demande
-
-</button>
-
-</form>
-
-</div>
-
-
-</div>
-
-</div>
-
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Contactez-nous</h2>
+      <p>
+        Besoin d’un service de nettoyage professionnel?
+        Nous sommes là pour vous aider.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Formulaire Formspree -->
+      <div class="contact-form">
+        <h3>Demandez une soumission</h3>
+
+        <form action="https://formspree.io/f/1xeajzpy" method="POST">
+
+          <div class="contact-item">
+            <label for="name">Nom complet</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Votre nom"
+              required
+            >
+          </div>
+
+          <div class="contact-item">
+            <label for="email">Courriel</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre adresse courriel"
+              required
+            >
+          </div>
+
+          <div class="contact-item">
+            <label for="phone">Téléphone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Votre numéro de téléphone"
+              required
+            >
+          </div>
+
+          <div class="contact-item">
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Décrivez-nous votre besoin de nettoyage..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Envoyer ma demande
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
 </section>
-
 
 <!-- =========================
      FOOTER
