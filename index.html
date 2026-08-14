@@ -1,51 +1,359 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wawa Clean</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wawa Clean | Services de nettoyage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7fbfa;
+      color: #183b3a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      padding: 22px 20px;
+      text-align: center;
+      border-bottom: 1px solid #e5eeee;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color: #159a91;
+    }
+
+    nav {
+      margin-top: 12px;
+    }
+
+    nav a {
+      color: #183b3a;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 70px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #e7faf7, #ffffff);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #123d3b;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 28px;
+      color: #55706f;
+    }
+
+    .button {
+      display: inline-block;
+      background: #159a91;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #117d76;
+    }
+
+    section {
+      padding: 55px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 35px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      padding: 28px 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .service .icon {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .service h3 {
+      margin-bottom: 8px;
+      color: #159a91;
+    }
+
+    .service p {
+      color: #667;
+      font-size: 15px;
+    }
+
+    .about {
+      background: white;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 15px;
+      border: 1px solid #d5e3e2;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #159a91;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #123d3b;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Wawa Clean</h1>
+  <header>
+    <div class="logo">Wawa Clean</div>
 
-<p>Service brillant, résultats éclatants.</p>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#apropos">À propos</a>
+      <a href="#soumission">Soumission</a>
+    </nav>
+  </header>
 
-<a href="#soumission">
-    <button>Demander une soumission</button>
-</a>
+  <section class="hero">
+    <h1>Wawa Clean</h1>
 
-<h2>Nos services</h2>
+    <p>
+      Service brillant, résultats éclatants.
+    </p>
 
-<p>Nettoyage résidentiel</p>
-<p>Nettoyage commercial</p>
-<p>Nettoyage de bureaux</p>
+    <a href="#soumission" class="button">
+      Demander une soumission
+    </a>
+  </section>
 
-<h2 id="soumission">Demandez votre soumission</h2>
+  <section id="services">
+    <h2 class="section-title">Nos services</h2>
 
-<p>Remplissez le formulaire et nous vous contacterons.</p>
+    <div class="services">
 
-<form>
-    <label>Nom</label><br>
-    <input type="text" placeholder="Votre nom"><br><br>
+      <div class="service">
+        <div class="icon">🏠</div>
+        <h3>Nettoyage résidentiel</h3>
+        <p>
+          Un espace propre, confortable et agréable pour votre famille.
+        </p>
+      </div>
 
-    <label>Téléphone</label><br>
-    <input type="tel" placeholder="Votre numéro"><br><br>
+      <div class="service">
+        <div class="icon">🏢</div>
+        <h3>Nettoyage commercial</h3>
+        <p>
+          Des espaces commerciaux propres et accueillants pour vos clients.
+        </p>
+      </div>
 
-    <label>Courriel</label><br>
-    <input type="email" placeholder="Votre courriel"><br><br>
+      <div class="service">
+        <div class="icon">💼</div>
+        <h3>Nettoyage de bureaux</h3>
+        <p>
+          Un environnement de travail propre, organisé et professionnel.
+        </p>
+      </div>
 
-    <label>Type de service</label><br>
-    <select>
+      <div class="service">
+        <div class="icon">✨</div>
+        <h3>Nettoyage en profondeur</h3>
+        <p>
+          Pour les espaces qui ont besoin d'une attention particulière.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="apropos">
+    <div class="about">
+      <h2 class="section-title">Pourquoi choisir Wawa Clean?</h2>
+
+      <p>
+        Chez Wawa Clean, nous croyons qu'un espace propre fait toute la
+        différence. Nous offrons un service soigné, professionnel et adapté
+        aux besoins de chaque client.
+      </p>
+
+      <br>
+
+      <p>
+        Notre objectif est simple :
+        <strong>vous offrir un nettoyage de qualité avec un service fiable.</strong>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Notre engagement</h2>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="icon">🧹</div>
+        <h3>Service soigné</h3>
+        <p>Nous portons attention aux détails.</p>
+      </div>
+
+      <div class="service">
+        <div class="icon">⏰</div>
+        <h3>Fiabilité</h3>
+        <p>Nous respectons nos engagements.</p>
+      </div>
+
+      <div class="service">
+        <div class="icon">💎</div>
+        <h3>Qualité</h3>
+        <p>Nous visons des résultats impeccables.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="soumission">
+    <h2 class="section-title">Demandez votre soumission</h2>
+
+    <p style="text-align:center; margin-bottom:25px;">
+      Remplissez le formulaire et nous vous contacterons.
+    </p>
+
+    <form>
+
+      <input
+        type="text"
+        name="nom"
+        placeholder="Votre nom"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Votre courriel"
+        required
+      >
+
+      <input
+        type="tel"
+        name="telephone"
+        placeholder="Votre téléphone"
+      >
+
+      <select name="service" required>
+        <option value="">Choisissez un service</option>
         <option>Nettoyage résidentiel</option>
         <option>Nettoyage commercial</option>
         <option>Nettoyage de bureaux</option>
-    </select><br><br>
+        <option>Nettoyage en profondeur</option>
+      </select>
 
-    <button type="submit">Envoyer ma demande</button>
-</form>
+      <textarea
+        name="message"
+        placeholder="Décrivez-nous vos besoins..."
+      ></textarea>
 
-		</body>
-		</html>
+      <button type="submit">
+        Envoyer ma demande
+      </button>
+
+    </form>
+  </section>
+
+  <footer>
+    <h3>Wawa Clean</h3>
+
+    <p>Service brillant, résultats éclatants.</p>
+
+    <p>© 2026 Wawa Clean — Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
