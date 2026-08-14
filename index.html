@@ -1,741 +1,990 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Wawa Clean | Services de nettoyage</title>
+<title>Wawa Clean | Nettoyage professionnel</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<meta name="description" content="Wawa Clean offre des services de nettoyage résidentiel, commercial et spécialisé à Shawinigan et dans les environs.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#243238;
+    background:#f7fbfa;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.98);
+    border-bottom:1px solid #e3eeee;
+    box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+
+.navbar{
+    max-width:1150px;
+    margin:auto;
+    padding:17px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:800;
+    color:#168f88;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#243238;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#168f88;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:55px 20px 70px;
+}
+
+.hero-text{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 35px;
+}
+
+.hero-text h1{
+    font-size:50px;
+    line-height:1.1;
+    color:#168f88;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    font-size:19px;
+    color:#58696d;
+}
+
+/* PHOTO PRINCIPALE */
+
+.hero-image{
+    width:100%;
+    max-width:1150px;
+    margin:auto;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 18px 45px rgba(0,0,0,.13);
+}
+
+.hero-image img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    object-position:center;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:75px 22px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#168f88;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#68777b;
+    font-size:17px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:white;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 28px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+}
+
+.service-card img{
+    display:block;
+    width:100%;
+    height:245px;
+    object-fit:cover;
+}
+
+.service-content{
+    padding:25px;
+}
+
+.service-content h3{
+    color:#168f88;
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.service-content p{
+    color:#5d6d71;
+}
+
+/* =========================
+   À PROPOS
+========================= */
+
+.about{
+    background:#edf8f6;
+}
+
+.about-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box h2{
+    color:#168f88;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.about-box p{
+    color:#526569;
+    font-size:18px;
+}
+
+/* =========================
+   POURQUOI NOUS
+========================= */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.why-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.why-icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.why-box h3{
+    color:#168f88;
+    margin-bottom:8px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#edf8f6;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.contact-info,
+.contact-form{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 28px rgba(0,0,0,.08);
+}
+
+.contact-info h3,
+.contact-form h3{
+    color:#168f88;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.contact-item{
+    margin-bottom:20px;
+}
+
+.contact-item strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+.contact-item a{
+    color:#168f88;
+    font-weight:700;
+}
+
+/* FORM */
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:13px;
+    border:1px solid #d5e2df;
+    border-radius:10px;
+    font-family:inherit;
+    font-size:16px;
+}
+
+.form-group textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    border:0;
+    border-radius:10px;
+    padding:15px;
+    background:#168f88;
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#11746e;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#243238;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer h3{
+    color:#76d8cb;
+    margin-bottom:8px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+footer a{
+    color:#76d8cb;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        flex-direction:column;
+        gap:12px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .nav-links{
+        gap:15px;
+        font-size:14px;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #243238;
-      background: #f7fbfa;
-      line-height: 1.6;
+    .hero{
+        padding-top:40px;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    .hero-text h1{
+        font-size:38px;
     }
 
-    /* NAVIGATION */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.97);
-      border-bottom: 1px solid #e4eeee;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    .hero-text p{
+        font-size:17px;
     }
 
-    .navbar {
-      max-width: 1150px;
-      margin: auto;
-      padding: 16px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .hero-image{
+        border-radius:20px;
     }
 
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-      color: #168f88;
+    .hero-image img{
+        width:100%;
+        height:auto;
+        object-fit:contain;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      align-items: center;
+    .service-grid,
+    .why-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
-    .nav-links a {
-      font-weight: 600;
-      color: #243238;
+    .service-card img{
+        height:auto;
+        max-height:350px;
+        object-fit:cover;
     }
 
-    .nav-links a:hover {
-      color: #168f88;
+    .section-title h2,
+    .about-box h2{
+        font-size:30px;
+    }
+}
+
+@media(max-width:480px){
+
+    .nav-links{
+        gap:10px;
+        font-size:13px;
     }
 
-    /* HERO */
-    .hero {
-      max-width: 1200px;
-      margin: auto;
-      padding: 45px 25px 60px;
+    .hero-text h1{
+        font-size:34px;
     }
 
-    .hero-text {
-      text-align: center;
-      margin-bottom: 30px;
+    .hero{
+        padding-left:15px;
+        padding-right:15px;
     }
 
-    .hero-text h1 {
-      font-size: 48px;
-      color: #168f88;
-      margin-bottom: 12px;
+    section{
+        padding:55px 15px;
     }
 
-    .hero-text p {
-      font-size: 20px;
-      color: #53656a;
-      max-width: 700px;
-      margin: auto;
-    }
+}
 
-    .hero-image {
-      width: 100%;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.13);
-    }
-
-    .hero-image img {
-      display: block;
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 70px 25px;
-    }
-
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      color: #168f88;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #66777b;
-      font-size: 17px;
-    }
-
-    /* SERVICES */
-    .services {
-      background: white;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .service-card {
-      background: #fff;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .service-card img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .service-content {
-      padding: 25px;
-    }
-
-    .service-content h3 {
-      color: #168f88;
-      font-size: 23px;
-      margin-bottom: 10px;
-    }
-
-    .service-content p {
-      color: #5f7074;
-    }
-
-    /* ABOUT */
-    .about {
-      background: #eef8f6;
-    }
-
-    .about-box {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about-box h2 {
-      color: #168f88;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .about-box p {
-      font-size: 18px;
-      color: #526468;
-    }
-
-    /* WHY US */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .why-box {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-    }
-
-    .why-box .icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .why-box h3 {
-      color: #168f88;
-      margin-bottom: 8px;
-    }
-
-    /* CONTACT / FORM */
-    .contact-section {
-      background: #eef8f6;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-      align-items: start;
-    }
-
-    .contact-info {
-      background: white;
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
-
-    .contact-info h3 {
-      font-size: 28px;
-      color: #168f88;
-      margin-bottom: 20px;
-    }
-
-    .contact-item {
-      margin-bottom: 18px;
-      font-size: 17px;
-    }
-
-    .contact-item strong {
-      display: block;
-      color: #243238;
-      margin-bottom: 3px;
-    }
-
-    .contact-item a {
-      color: #168f88;
-      font-weight: 600;
-    }
-
-    .quote-form {
-      background: white;
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    }
-
-    .quote-form h3 {
-      color: #168f88;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 700;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #d5e1df;
-      border-radius: 10px;
-      font-size: 16px;
-      font-family: inherit;
-    }
-
-    .form-group textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .submit-btn {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 10px;
-      background: #168f88;
-      color: white;
-      font-size: 17px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover {
-      background: #11746e;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #243238;
-      color: white;
-      padding: 35px 25px;
-      text-align: center;
-    }
-
-    footer h3 {
-      color: #75d6c8;
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    footer a {
-      color: #75d6c8;
-    }
-
-    /* MOBILE */
-    @media (max-width: 800px) {
-
-      .nav-links {
-        gap: 12px;
-        font-size: 14px;
-      }
-
-      .hero-text h1 {
-        font-size: 36px;
-      }
-
-      .hero-text p {
-        font-size: 17px;
-      }
-
-      .hero-image img {
-        height: 330px;
-      }
-
-      .service-grid,
-      .why-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title h2,
-      .about-box h2 {
-        font-size: 30px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 
 <body>
 
-  <!-- NAVIGATION -->
-  <header>
-    <nav class="navbar">
-      <a href="#accueil" class="logo">Wawa Clean</a>
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-      <div class="nav-links">
-        <a href="#accueil">Accueil</a>
-        <a href="#services">Services</a>
-        <a href="#apropos">À propos</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+<header>
 
+<div class="navbar">
 
-  <!-- ACCUEIL -->
-  <section id="accueil" class="hero">
+<a href="#accueil" class="logo">
+Wawa Clean
+</a>
 
-    <div class="hero-text">
-      <h1>Wawa Clean</h1>
+<div class="nav-links">
 
-      <p>
-        Service brillant, résultats éclatants.
-        Des services de nettoyage professionnels,
-        fiables et adaptés à vos besoins.
-      </p>
-    </div>
+<a href="#accueil">Accueil</a>
 
-    <!-- PHOTO PRINCIPALE -->
-    <div class="hero-image">
-      <img
-        src="Wawa_Clean_Image_Principale.png"
-        alt="Wawa Clean - Service de nettoyage professionnel">
-    </div>
+<a href="#services">Services</a>
 
-  </section>
+<a href="#apropos">À propos</a>
 
+<a href="#contact">Contact</a>
 
-  <!-- SERVICES -->
-  <section id="services" class="services">
+</div>
 
-    <div class="container">
+</div>
 
-      <div class="section-title">
-        <h2>Nos services</h2>
-        <p>Des solutions de nettoyage pour votre maison et votre entreprise.</p>
-      </div>
+</header>
 
-      <div class="service-grid">
 
-        <!-- COMMERCIAL -->
-        <div class="service-card">
+<!-- =========================
+     ACCUEIL
+========================= -->
 
-          <img
-            src="wawa-clean-commercial.png"
-            alt="Nettoyage commercial Wawa Clean">
+<section id="accueil" class="hero">
 
-          <div class="service-content">
+<div class="hero-text">
 
-            <h3>Nettoyage commercial</h3>
+<h1>
+Wawa Clean
+</h1>
 
-            <p>
-              Nettoyage professionnel des bureaux,
-              commerces et espaces professionnels
-              pour maintenir un environnement propre
-              et accueillant.
-            </p>
+<p>
+Service brillant, résultats éclatants.
+<br>
+Des services de nettoyage professionnels,
+fiables et adaptés à vos besoins.
+</p>
 
-          </div>
-        </div>
+</div>
 
 
-        <!-- RÉSIDENTIEL -->
-        <div class="service-card">
+<!-- PHOTO PRINCIPALE -->
 
-          <img
-            src="wawa-clean-residentiel.png"
-            alt="Nettoyage résidentiel Wawa Clean">
+<div class="hero-image">
 
-          <div class="service-content">
+<img
+src="Wawa_Clean_Image_Principale.png"
+alt="Wawa Clean - nettoyage professionnel">
 
-            <h3>Nettoyage résidentiel</h3>
+</div>
 
-            <p>
-              Un service de nettoyage soigné pour
-              les maisons, appartements et espaces
-              résidentiels.
-            </p>
+</section>
 
-          </div>
-        </div>
 
+<!-- =========================
+     SERVICES
+========================= -->
 
-        <!-- SPÉCIALISÉ -->
-        <div class="service-card">
+<section id="services" class="services">
 
-          <img
-            src="wawa-clean-specialise.png"
-            alt="Services spécialisés Wawa Clean">
+<div class="container">
 
-          <div class="service-content">
+<div class="section-title">
 
-            <h3>Nettoyage spécialisé</h3>
+<h2>
+Nos services
+</h2>
 
-            <p>
-              Des solutions adaptées aux besoins
-              particuliers de chaque client,
-              avec attention aux détails.
-            </p>
+<p>
+Des solutions de nettoyage pour votre maison,
+votre entreprise et vos espaces professionnels.
+</p>
 
-          </div>
-        </div>
+</div>
 
-      </div>
-    </div>
 
-  </section>
+<div class="service-grid">
 
 
-  <!-- À PROPOS -->
-  <section id="apropos" class="about">
+<!-- RÉSIDENTIEL -->
 
-    <div class="container">
+<div class="service-card">
 
-      <div class="about-box">
+<img
+src="wawa-clean-residentiel.png"
+alt="Nettoyage résidentiel Wawa Clean">
 
-        <h2>À propos de Wawa Clean</h2>
+<div class="service-content">
 
-        <p>
-          Wawa Clean offre des services de nettoyage
-          résidentiel, commercial et spécialisé.
-          Notre objectif est simple : offrir un service
-          professionnel, fiable et minutieux afin que
-          chaque espace soit propre, frais et agréable.
-        </p>
+<h3>
+Nettoyage résidentiel
+</h3>
 
-      </div>
+<p>
+Un service soigné pour les maisons,
+appartements et espaces résidentiels.
+Nous vous aidons à garder votre environnement
+propre, frais et agréable.
+</p>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
 
-  <!-- POURQUOI NOUS -->
-  <section>
+<!-- COMMERCIAL -->
 
-    <div class="container">
+<div class="service-card">
 
-      <div class="section-title">
-        <h2>Pourquoi choisir Wawa Clean?</h2>
-        <p>Notre priorité est votre satisfaction.</p>
-      </div>
+<img
+src="wawa-clean-commercial.png"
+alt="Nettoyage commercial Wawa Clean">
 
-      <div class="why-grid">
+<div class="service-content">
 
-        <div class="why-box">
-          <div class="icon">✨</div>
-          <h3>Qualité</h3>
-          <p>
-            Nous accordons une attention particulière
-            aux détails.
-          </p>
-        </div>
+<h3>
+Nettoyage commercial
+</h3>
 
-        <div class="why-box">
-          <div class="icon">🤝</div>
-          <h3>Fiabilité</h3>
-          <p>
-            Un service sérieux et professionnel
-            adapté à vos besoins.
-          </p>
-        </div>
+<p>
+Des services adaptés aux bureaux,
+commerces et espaces professionnels
+afin de maintenir un environnement
+propre et accueillant.
+</p>
 
-        <div class="why-box">
-          <div class="icon">🧼</div>
-          <h3>Propreté</h3>
-          <p>
-            Nous travaillons pour vous offrir
-            un espace propre et agréable.
-          </p>
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </div>
 
-  </section>
+<!-- SPÉCIALISÉ -->
 
+<div class="service-card">
 
-  <!-- CONTACT + FORMULAIRE -->
-  <section id="contact" class="contact-section">
+<img
+src="wawa-clean-specialise.png"
+alt="Nettoyage spécialisé Wawa Clean">
 
-    <div class="container">
+<div class="service-content">
 
-      <div class="section-title">
-        <h2>Contactez-nous</h2>
-        <p>
-          Besoin d'un service de nettoyage?
-          Communiquez avec nous.
-        </p>
-      </div>
+<h3>
+Nettoyage spécialisé
+</h3>
 
-      <div class="contact-grid">
+<p>
+Des solutions personnalisées selon
+vos besoins particuliers, avec une
+attention particulière aux détails.
+</p>
 
-        <!-- CONTACT -->
-        <div class="contact-info">
+</div>
 
-          <h3>Nos coordonnées</h3>
+</div>
 
-          <div class="contact-item">
-            <strong>📞 Téléphone</strong>
 
-            <a href="tel:8192474996">
-              819-247-4996
-            </a>
+</div>
 
-            <br>
+</div>
 
-            <a href="tel:8199794300">
-              819-979-4300
-            </a>
-          </div>
+</section>
 
 
-          <div class="contact-item">
-            <strong>✉️ Courriel</strong>
+<!-- =========================
+     À PROPOS
+========================= -->
 
-            <a href="mailto:wawaclean4@gmail.com">
-              wawaclean4@gmail.com
-            </a>
-          </div>
+<section id="apropos" class="about">
 
+<div class="container">
 
-          <div class="contact-item">
-            <strong>📍 Secteur desservi</strong>
+<div class="about-box">
 
-            Shawinigan et les environs
-          </div>
+<h2>
+À propos de Wawa Clean
+</h2>
 
-        </div>
+<p>
+Wawa Clean est une entreprise de nettoyage
+qui met l'accent sur la qualité, la fiabilité
+et le professionnalisme.
+</p>
 
+<br>
 
-        <!-- FORMULAIRE -->
-        <div class="quote-form">
+<p>
+Notre mission est de vous offrir un espace
+propre, confortable et agréable grâce à un
+service adapté à vos besoins.
+</p>
 
-          <h3>Demander une soumission</h3>
+</div>
 
-          <form action="mailto:wawaclean4@gmail.com"
-                method="post"
-                enctype="text/plain">
+</div>
 
-            <div class="form-group">
-              <label for="nom">Nom complet</label>
+</section>
 
-              <input
-                type="text"
-                id="nom"
-                name="Nom"
-                placeholder="Votre nom"
-                required>
-            </div>
 
+<!-- =========================
+     POURQUOI NOUS
+========================= -->
 
-            <div class="form-group">
-              <label for="telephone">Téléphone</label>
+<section>
 
-              <input
-                type="tel"
-                id="telephone"
-                name="Téléphone"
-                placeholder="Votre numéro"
-                required>
-            </div>
+<div class="container">
 
+<div class="section-title">
 
-            <div class="form-group">
-              <label for="email">Courriel</label>
+<h2>
+Pourquoi choisir Wawa Clean?
+</h2>
 
-              <input
-                type="email"
-                id="email"
-                name="Courriel"
-                placeholder="Votre courriel"
-                required>
-            </div>
+<p>
+Notre priorité est votre satisfaction.
+</p>
 
+</div>
 
-            <div class="form-group">
-              <label for="service">Type de service</label>
 
-              <select id="service" name="Service">
+<div class="why-grid">
 
-                <option value="Résidentiel">
-                  Nettoyage résidentiel
-                </option>
 
-                <option value="Commercial">
-                  Nettoyage commercial
-                </option>
+<div class="why-box">
 
-                <option value="Spécialisé">
-                  Nettoyage spécialisé
-                </option>
+<div class="why-icon">
+✨
+</div>
 
-              </select>
-            </div>
+<h3>
+Qualité
+</h3>
 
+<p>
+Nous accordons une attention particulière
+aux détails et à la qualité du travail.
+</p>
 
-            <div class="form-group">
-              <label for="message">Message</label>
+</div>
 
-              <textarea
-                id="message"
-                name="Message"
-                placeholder="Décrivez-nous votre besoin..."></textarea>
 
-            </div>
+<div class="why-box">
 
+<div class="why-icon">
+🤝
+</div>
 
-            <button type="submit" class="submit-btn">
-              Envoyer ma demande
-            </button>
+<h3>
+Fiabilité
+</h3>
 
-          </form>
+<p>
+Un service sérieux, organisé et adapté
+à vos besoins.
+</p>
 
-        </div>
+</div>
 
-      </div>
 
-    </div>
+<div class="why-box">
 
-  </section>
+<div class="why-icon">
+💎
+</div>
 
+<h3>
+Professionnalisme
+</h3>
 
-  <!-- FOOTER -->
-  <footer>
+<p>
+Un service respectueux et professionnel
+pour chaque client.
+</p>
 
-    <h3>Wawa Clean</h3>
+</div>
 
-    <p>Service brillant, résultats éclatants.</p>
 
-    <p>
-      📞
-      <a href="tel:8192474996">819-247-4996</a>
-      ·
-      <a href="tel:8199794300">819-979-4300</a>
-    </p>
+</div>
 
-    <p>
-      ✉️
-      <a href="mailto:wawaclean4@gmail.com">
-        wawaclean4@gmail.com
-      </a>
-    </p>
+</div>
 
-    <p>© 2026 Wawa Clean. Tous droits réservés.</p>
+</section>
 
-  </footer>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Contactez-nous
+</h2>
+
+<p>
+Besoin d'un service de nettoyage?
+Nous sommes là pour vous aider.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<!-- COORDONNÉES -->
+
+<div class="contact-info">
+
+<h3>
+Nos coordonnées
+</h3>
+
+
+<div class="contact-item">
+
+<strong>
+📞 Téléphone
+</strong>
+
+<a href="tel:8192474996">
+819-247-4996
+</a>
+
+<br>
+
+<a href="tel:8199794300">
+819-979-4300
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+📧 Courriel
+</strong>
+
+<a href="mailto:wawaclean4@gmail.com">
+wawaclean4@gmail.com
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+📍 Secteur desservi
+</strong>
+
+Shawinigan et les environs
+
+</div>
+
+</div>
+
+
+<!-- FORMULAIRE -->
+
+<div class="contact-form">
+
+<h3>
+Demander une soumission
+</h3>
+
+
+<form
+action="mailto:wawaclean4@gmail.com"
+method="post"
+enctype="text/plain"
+>
+
+
+<div class="form-group">
+
+<label for="nom">
+Nom complet
+</label>
+
+<input
+type="text"
+id="nom"
+name="Nom"
+placeholder="Votre nom"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="telephone">
+Téléphone
+</label>
+
+<input
+type="tel"
+id="telephone"
+name="Téléphone"
+placeholder="Votre numéro"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="email">
+Courriel
+</label>
+
+<input
+type="email"
+id="email"
+name="Courriel"
+placeholder="Votre courriel"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="service">
+Type de service
+</label>
+
+<select
+id="service"
+name="Service"
+required>
+
+<option value="">
+Sélectionnez un service
+</option>
+
+<option value="Nettoyage résidentiel">
+Nettoyage résidentiel
+</option>
+
+<option value="Nettoyage commercial">
+Nettoyage commercial
+</option>
+
+<option value="Nettoyage spécialisé">
+Nettoyage spécialisé
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="message">
+Votre message
+</label>
+
+<textarea
+id="message"
+name="Message"
+placeholder="Décrivez-nous votre besoin..."
+required></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="submit-btn">
+
+Envoyer ma demande
+
+</button>
+
+</form>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h3>
+Wawa Clean
+</h3>
+
+<p>
+Service brillant, résultats éclatants.
+</p>
+
+<p>
+📞
+<a href="tel:8192474996">
+819-247-4996
+</a>
+&nbsp; • &nbsp;
+<a href="tel:8199794300">
+819-979-4300
+</a>
+</p>
+
+<p>
+📧
+<a href="mailto:wawaclean4@gmail.com">
+wawaclean4@gmail.com
+</a>
+</p>
+
+<p>
+© 2026 Wawa Clean. Tous droits réservés.
+</p>
+
+</footer>
 
 </body>
 </html>
